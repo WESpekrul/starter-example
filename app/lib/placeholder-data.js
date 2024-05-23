@@ -1,5 +1,33 @@
 // This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
 // https://nextjs.org/learn/dashboard-app/fetching-data
+
+/* 
+	customer_id: 3958dc9e-712f-4377-85e9-fec4b6a6442a,
+    	amount: 66699,
+    	status: 'paid',
+    	date: '2023-06-29',
+
+10 vendedores 
+
+id
+name
+email
+image_url
+11	
+Wesley Pekrul		
+wesleypekrul@oliveira.com.br	
+/customers/delba-de-oliveira.png
+
+
+INSERT INTO customers (name, email, image_url) VALUES ('Wesley Pekrul', 'wesleypekrul@oliveira.com.br', '/customers/delba-de-oliveira.png');
+
+INSERT INTO users (name, email, password) VALUES ('Wesley Pekrul', 'wesleypekrul@oliveira.com.br', '123456');
+
+INSERT INTO invoices (customer_id, amount, status, date) VALUES ('3958dc9e712f437785e9fec4b6a6442a', 1433, 'paid', '2023-06-09');
+
+INSERT INTO revenue (customer_id, amount, status, date) VALUES ('','',);
+
+*/
 const users = [
   {
     id: '410544b2-4001-4271-9855-fec4b6a6442a',
