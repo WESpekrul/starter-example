@@ -13,6 +13,7 @@ import {
 import { formatCurrency } from './utils';
 import { sql } from '@vercel/postgres';
 
+
 export async function fetchRevenue() {
   // Add noStore() here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).

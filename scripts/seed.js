@@ -21,7 +21,7 @@ async function seedUsers(client) {
     `;
 
     console.log(`Created "users" table`);
-
+      //teste 
     // Insert data into the "users" table
     const insertedUsers = await Promise.all(
       users.map(async (user) => {
