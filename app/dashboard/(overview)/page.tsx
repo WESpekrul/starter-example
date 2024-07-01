@@ -10,6 +10,11 @@ import { RevenueChartSkeleton,
 import { fetchCardData } from '@/app/lib/data';
 
 import { fetchLatestInvoices } from '@/app/lib/data';
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Dashboard Central',
+};
  
 export default async function Page() {
   
