@@ -240,3 +240,19 @@ export async function getUser(email: string) {
     throw new Error('Failed to fetch user.');
   }
 }
+
+export async function fetchCustomersPages(query: string) {
+  
+ {
+    const count = await sql`SELECT
+        name,
+        email
+      FROM customers
+      ORDER BY name ASC    
+      
+  `;
+
+    const totalPages = Math.ceil(Number(count.rows[0].count) / ITEMS_PER_PAGE);
+    return totalPages;
+  } 
+}
