@@ -91,16 +91,7 @@ export async function updateCustomers(
  
   const { name, email, image_url  } = validatedFields.data;
   
-  try {
-    await sql`
-      UPDATE customers
-      SET customers_id = ${customerId}, amount = ${amount}, status = ${status}
-      WHERE id = ${id}
-    `;
-  } catch (error) {
-    return { message: 'Database Error: Failed to Update Customer.' };
-  }
- 
+  
   revalidatePath('/dashboard/customers');
   redirect('/dashboard/customers');
 }
