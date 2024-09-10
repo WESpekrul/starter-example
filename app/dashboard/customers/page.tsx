@@ -1,11 +1,11 @@
-import Pagination from '@/app/ui/invoices/pagination';
+import Pagination from '@/app/ui/customers/pagination';
 import Search from '@/app/ui/search';
-import Table from '@/app/ui/invoices/table';
-import { CreateCustomer } from '@/app/ui/invoices/buttons';
+import Table from '@/app/ui/customers/table';
+import { CreateCustomer } from '@/app/ui/customers/buttons';
 import { lusitana } from '@/app/ui/fonts';
 import { CustomersTableSkeleton} from '@/app/ui/skeletons';
 import { Suspense } from 'react';
-import { fetchCustomersPages } from '@/app/lib/data';
+import { fetchCustomersPages } from '@/app/lib/dataC';
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default async function Page({
         <CreateCustomer />
       </div>
       <Suspense key={query + currentPage} fallback={<CustomersTableSkeleton/>}>
-        <Table query={query} currentPage={currentPage} />
+        
       </Suspense>
       <div className="mt-5 flex w-full justify-center">
         { <Pagination totalPages={totalPages} /> }

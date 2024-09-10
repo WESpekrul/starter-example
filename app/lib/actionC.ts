@@ -77,7 +77,7 @@ export async function updateCustomers(
   formData: FormData,
 ) {
   const validatedFields = UpdateCustomer.safeParse({
-    customerId: formData.get('custoerId'),
+    customerId: formData.get('customerId'),
     amount: formData.get('amount'),
     status: formData.get('status'),
   });
@@ -94,7 +94,7 @@ export async function updateCustomers(
   try {
     await sql`
       UPDATE customers
-      SET customer_id = ${customerId}, amount = ${amountInCents}, status = ${status}
+      SET customers_id = ${customerId}, amount = ${amount}, status = ${status}
       WHERE id = ${id}
     `;
   } catch (error) {
@@ -105,7 +105,7 @@ export async function updateCustomers(
   redirect('/dashboard/customers');
 }
 
-export async function deleteCustomers(id: string) {
+export async function deleteCustomer(id: string) {
   throw new Error('Failed to Delete Customers');
   try {
     await sql`DELETE FROM Customers WHERE id = ${id}`;
